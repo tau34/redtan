@@ -1,0 +1,103 @@
+/* リセット */
+body, h1, h2, h3, p, label, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* 全体の背景と文字設定 */
+body {
+    background: linear-gradient(to bottom, #f0f8ff, #e6f7ff);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ラベルのスタイル */
+label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+/* 入力ボックス */
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* チェックボックス */
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* ボタンスタイル */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #004085;
+}
+
+/* 非表示の要素を柔軟にスタイリング */
+button[style*="display: none;"],
+p[style*="display: none;"] {
+    display: none !important;
+}
+
+/* テキスト部分 */
+p.ja, p.en, p.solution {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    line-height: 1.5;
+    max-width: 80%;
+    text-align: center;
+}
+
+/* フォーカスした要素の強調 */
+input:focus, button:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 600px) {
+    label {
+        font-size: 1rem;
+    }
+
+    input[type="number"] {
+        width: 50px;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    p.ja, p.en, p.solution {
+        font-size: 1rem;
+    }
+}
